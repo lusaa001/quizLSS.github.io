@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h1>Quiz</h1>
+    <h2>Hvilket fag kalles PMX?</h2>
+    <button id="idRiktig1">Programmering og Modellering X</button>
+    <button>Praksis Med Xylofoner</button>
+    <button>Polynomer møter x-aksen</button>
+    <h2>Hvem av oss vinner til slutt?</h2>
+    <button>Per</button>
+    <button>Pål</button>
+    <button id="idRiktig2">Espen</button>
+<script>
+    var knapp1El = document.getElementById("idRiktig1")
+    var knapp2El = document.getElementById("idRiktig2")
+
+    knapp1El.addEventListener("click",riktigfunk)
+    knapp2El.addEventListener("click",riktigfunk)
+
+    function riktigfunk(event) {
+        event.target.innerHTML += " Riktig"
+        event.target.removeEventListener("click",riktigfunk)
+    }
+</script>
+</body>
+</html>
